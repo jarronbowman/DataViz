@@ -1,0 +1,49 @@
+Version: 1.0
+
+RestoreWorkspace: Default
+SaveWorkspace: Default
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
+
+
+getwd()
+library(devtools)
+install.packages("devtools")
+install.packages("ggplot2")
+gapminder.url <- "https://raw.githubusercontent.com/socviz/soc880/master/data/gapminder.csv"
+data <- read.csv(url(gapminder.url))
+str(data)
+dim(data)
+head(data)
+p <- ggplot(data, aes(x = gdpPercap, y = lifeExp))
+str(ggplot2)
+p <- ggplot2(data, aes(x = gdpPercap, y = lifeExp))
+library(ggplot2)
+library(devtools)
+p <- ggplot(data, aes(x = gdpPercap, y = lifeExp))
+find_rtools()
+p
+p <- ggplot(data,
+aes(x=gdpPercap,
+y=lifeExp))
+p
+p + geom_point()
+p1 <- ggplot(data,
+aes(x=lifeExp,
+y=gdpPercap))
+p1 + geom_point()
+p2 <- ggplot(data,
+aes(x=pop,
+y=gdpPercap))
+p2 + geom_point()
+p3 <- ggplot(data,
+aes(x=year,
+y=lifeExp))
+p3 + geom_point()
